@@ -1,2 +1,10 @@
 ---
 # handlers file for scalr
+
+- name: scalr-server-wizard
+  shell: /opt/scalr-server/bin/scalr-server-wizard
+  become: yes
+
+- name: scalr-server-ctl reconfigure
+  shell: /opt/scalr-server/bin/scalr-server-ctl reconfigure
+  become: yes
