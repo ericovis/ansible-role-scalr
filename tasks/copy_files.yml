@@ -6,5 +6,5 @@
     dest: "{{ item.dest }}"
     mode: +x
   with_items:
-    - src: ../scripts/set_password.py
+    - src: ./scripts/set_password.py
       dest: /tmp/set_password.py
