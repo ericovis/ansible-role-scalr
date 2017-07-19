@@ -9,7 +9,6 @@
   apt:
     name: scalr-server
     state: latest
-  become: yes
   notify: scalr-server-wizard
 
 - meta: flush_handlers
