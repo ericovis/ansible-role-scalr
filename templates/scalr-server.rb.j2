@@ -9,7 +9,7 @@ routing[:endpoint_host] = "{{ endpoint_host }}"
 # Following IPs will be whitelisted on Scalr controlled instances
 app[:ip_ranges] = [
   {% for ip in ip_ranges %}
-  "{{ ip }}"{{ "," if not loop.last }}
+  "{{ ip }}"{{ ",\n" if not loop.last else ""}}
   {% endfor %}
 ]
 
