@@ -1,0 +1,6 @@
+---
+# tasks file for scalr
+
+- include: copy_files.yml
+- include: debian_repo.yml
+- include: install.yml
