@@ -4,7 +4,7 @@
   apt:
     name: scalr-server
     state: present
-    update_chache: yes
+    update_cache: yes
   become: yes
   notify:
     - scalr wizard
