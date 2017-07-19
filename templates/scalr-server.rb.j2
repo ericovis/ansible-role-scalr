@@ -6,6 +6,13 @@ enable_all true
 # Scalr web UI URL
 routing[:endpoint_host] = "{{ endpoint_host }}"
 
+# Following IPs will be whitelisted on Scalr controlled instances
+app[:ip_ranges] = [
+  {% for ip in ip_ranges %}
+  "{{ ip }}"{{ "," if not loop.last }}
+  {% endfor %}
+]
+
 # Uncomment to enable SSL
 #proxy[:ssl_enable] = true
 #proxy[:ssl_redirect] = true
