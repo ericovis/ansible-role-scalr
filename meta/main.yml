@@ -32,9 +32,10 @@ galaxy_info:
   # platforms is a list of platforms, and each platform has a name and a list of versions.
   #
   platforms:
-  - name: Debian
+  - name: Ubuntu
     versions:
-    - all
+    - 14.04
+    - 12.04
 
   # - name: SomePlatform
   #   versions:

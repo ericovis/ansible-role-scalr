@@ -2,14 +2,13 @@
 
 - name: Install Open Source Scalr repo
   shell: >
-    curl -L https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb 
+    curl -L https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb
     | sudo bash
 
 - name: Install Scalr
   apt:
     name: scalr-server
     state: present
-    update_cache: yes
   become: yes
   notify:
     - scalr wizard
