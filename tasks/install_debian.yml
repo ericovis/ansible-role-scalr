@@ -5,9 +5,12 @@
     curl -L https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb
     | sudo bash
 
+- name: Run scalr-server-wizard
+  shell: /opt/scalr-server/bin/scalr-server-wizard
+  become: yes
+
 - name: Install Scalr
   apt:
     name: scalr-server
     state: present
   become: yes
-  notify: scalr wizard
