@@ -13,7 +13,7 @@ input_file = '/etc/scalr-server/scalr-server-secrets.json'
 with open(input_file) as f:
     output = json.load(f)
 
-output['app']['admin_password'] = admin_password
+output['app']['admin_password'] = args.admin_password
 
 with open(input_file, 'w') as f:
     json.dump(output, f)
