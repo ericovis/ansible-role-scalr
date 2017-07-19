@@ -1,8 +1,9 @@
 --- # Install Scalr repo for Debian systems
 
 - name: Install Open Source Scalr repo
-  apt:
-    deb: https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb
+  shell: >
+    curl -L https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb 
+    | sudo bash
 
 - name: Install Scalr
   apt:
