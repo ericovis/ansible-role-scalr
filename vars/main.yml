@@ -1,2 +1,6 @@
 ---
 # vars file for scalr
+
+scripts:
+  - src: ./scripts/set_password.py
+    dest: /tmp/set_password.py

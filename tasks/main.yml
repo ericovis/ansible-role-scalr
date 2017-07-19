@@ -1,6 +1,12 @@
 ---
 # tasks file for scalr
 
-- include: copy_files.yml
-- include: install_debian.yml
-- include: set_password.yml
+pre_tasks:
+  - include: copy_files.yml
+
+tasks:
+  - include: install_debian.yml
+  - include: set_password.yml
+
+post_tasks:
+  - include: clean.yml

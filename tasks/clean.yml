@@ -1,0 +1,7 @@
+--- # Clean needed files
+
+- name: Clean the config scripts
+  file:
+    path: "{{ item.dest }}"
+    state: absent
+  with_items: "{{ scripts }}"
