@@ -2,3 +2,6 @@
 # defaults file for scalr
 
 admin_password: Scalr
+endpoint_host: "{{ inventory_hostname }}"
+
+setup_azure: false

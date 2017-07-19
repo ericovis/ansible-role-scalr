@@ -1,5 +1,11 @@
 --- # Install Scalr
 
+- name: Placing scaler-server.rb
+  template:
+    src: ./templates/scalr-server.rb.j2
+    dest: /etc/scalr-server/scalr-server.rb
+  become: yes
+
 - name: Set password
   shell: "python /tmp/set_password.py {{ admin_password }}"
   become: yes
