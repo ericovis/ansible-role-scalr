@@ -10,7 +10,7 @@ args = parser.parse_args()
 input_file = '/etc/scalr-server/scalr-server-secrets.json'
 
 
-with open(inputFile) as f:
+with open(input_file) as f:
     output = json.load(f)
 
 output['app']['admin_password'] = admin_password
