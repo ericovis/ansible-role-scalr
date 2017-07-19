@@ -1,5 +1,9 @@
 --- # Install Scalr repo for Debian systems
 
+- name: Install Open Source Scalr repo
+  apt:
+    deb: https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb
+
 - name: Install Scalr
   apt:
     name: scalr-server
@@ -8,7 +12,3 @@
   become: yes
   notify:
     - scalr wizard
-
-- name: Install Open Source Scalr repo
-  apt:
-    deb: https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb
