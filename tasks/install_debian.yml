@@ -10,4 +10,4 @@
     name: scalr-server
     state: latest
   become: yes
-  notify: scalr-server-wizard
+  notify: "scalr-server-wizard"
