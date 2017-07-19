@@ -10,5 +10,4 @@
     name: scalr-server
     state: present
   become: yes
-  notify:
-    - scalr wizard
+  notify: scalr wizard
