@@ -4,6 +4,7 @@
   template:
     src: ./templates/scalr-server.rb.j2
     dest: /etc/scalr-server/scalr-server.rb
+  when: "update_template == true"
 
 - name: Set password
   shell: "python /tmp/set_password.py {{ admin_password }}"

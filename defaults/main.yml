@@ -8,3 +8,5 @@ endpoint_host: "{{ inventory_hostname }}"
 deb_source_repo: https://packagecloud.io/install/repositories/scalr/scalr-server-oss/script.deb
 
 setup_azure: false
+
+update_template: false
